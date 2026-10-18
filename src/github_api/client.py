@@ -31,8 +31,17 @@ class GitHubClient:
                 "Content-Type": "application/json",
             },
         )
-        with urlopen(request, timeout=30) as response:
-            return json.loads(response.read().decode("utf-8"))
+        try:
+            with urlopen(request, timeout=30) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except HTTPError as error:
+            try:
+                error_body = error.read().decode("utf-8")
+            except Exception:
+                error_body = ""
+            if error_body:
+                raise HTTPError(error.url, error.code, f"{error.msg} - {error_body}", error.hdrs, error.fp) from None
+            raise
 
     def repositories(self) -> list[dict[str, Any]]:
         page, repositories = 1, []
