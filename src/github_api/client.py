@@ -10,8 +10,11 @@ from urllib.request import Request, urlopen
 
 class GitHubClient:
     def __init__(self, token: str, username: str | None = None) -> None:
-        self.token = token
-        self.username = username
+        clean_token = (token or "").replace("\r", "").replace("\n", "").strip().strip('"').strip("'")
+        if clean_token.lower().startswith("bearer "):
+            clean_token = clean_token[7:].strip()
+        self.token = clean_token
+        self.username = username.strip() if username else None
         self.base_url = "https://api.github.com"
 
     def request(self, path: str, method: str = "GET", payload: dict[str, Any] | None = None) -> Any:
