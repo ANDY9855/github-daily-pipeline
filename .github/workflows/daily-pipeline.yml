@@ -1,0 +1,63 @@
+name: Daily repository maintenance
+
+on:
+  schedule:
+    # 10:00 Asia/Karachi = 05:00 UTC (Pakistan Standard Time is UTC+5)
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Inspect without updating the selected repository README"
+        required: false
+        default: true
+        type: boolean
+
+concurrency:
+  group: github-daily-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  process-one-repository:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Cross-repository API access; configure as a fine-grained PAT secret.
+      GITHUB_TOKEN: ${{ secrets.PIPELINE_GITHUB_TOKEN }}
+      GITHUB_USERNAME: ${{ github.repository_owner }}
+      TIMEZONE: Asia/Karachi
+      # Scheduled runs must write one README commit; manual runs remain dry-run unless explicitly disabled.
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+      AUTOMATION_REPOSITORY: ${{ github.repository }}
+      QUEUE_STATE_PATH: state/repos.json
+    steps:
+      - name: Check out automation repository
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Use the per-workflow token for this repo; a cross-repo PAT may not
+          # have access to the automation repo itself.
+          token: ${{ github.token }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run daily pipeline
+        run: python -m src.main
+
+      - name: Commit persistent state and logs
+        if: always() && steps.checkout.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/repos.json logs/
+          git diff --cached --quiet || git commit -m "chore: record daily repository pipeline run"
+          git push
