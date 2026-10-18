@@ -1,3 +1,36 @@
 # Daily pipeline run logs
 2026-10-18 08:41:13,622 INFO Interval=2026-10-18-slot-2 selected=ANDY9855/dumb position=1/16 new=True dry_run=True
 2026-10-18 08:41:13,622 INFO Dry run complete; rotation state was not advanced
+2026-10-18 08:41:41,397 INFO Interval=2026-10-18-slot-2 selected=ANDY9855/dumb position=1/16 new=False dry_run=False
+2026-10-18 08:41:41,784 ERROR Processing failed for ANDY9855/dumb
+Traceback (most recent call last):
+  File "/home/runner/work/github-daily-pipeline/github-daily-pipeline/src/main.py", line 46, in main
+    status, action, commit_sha, push_result = process(target, dry_run, logger, client=client, run_date=display_timestamp)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/github-daily-pipeline/github-daily-pipeline/src/processor/engine.py", line 57, in process
+    response = client.update_readme(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/github-daily-pipeline/github-daily-pipeline/src/github_api/client.py", line 62, in update_readme
+    return self.request(f"/repos/{full_name}/contents/README.md", method="PUT", payload=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/github-daily-pipeline/github-daily-pipeline/src/github_api/client.py", line 34, in request
+    with urlopen(request, timeout=30) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
