@@ -24,7 +24,7 @@
       "is_new": false,
       "last_action": "Updated README.md with today's maintenance record",
       "last_error": null,
-      "last_processed_date": "2026-11-11-slot-0",
+      "last_processed_date": "2026-11-20-slot-1",
       "manual_review": false,
       "name": "moiza",
       "queue_position": 2,
@@ -362,25 +362,11 @@
     }
   ],
   "rotation": {
-    "last_repository_id": 1422994218,
-    "last_run_date": "2026-11-20-slot-0",
-    "next_position": 2
+    "last_repository_id": 1418697935,
+    "last_run_date": "2026-11-20-slot-1",
+    "next_position": 3
   },
   "runs": [
-    {
-      "action": "Updated README.md with today's maintenance record",
-      "commit_sha": "2b105aa4cc73091ffed37d0b965d745489c91ff9",
-      "date": "2026-10-18-slot-3",
-      "error": null,
-      "is_new": false,
-      "next_position": 3,
-      "push_result": "pushed",
-      "repository": "ANDY9855/moiza",
-      "rotation_position": 2,
-      "status": "completed",
-      "timestamp": "2026-10-18T15:25:56.357964+00:00",
-      "total_repositories": 24
-    },
     {
       "action": "Updated README.md with today's maintenance record",
       "commit_sha": "2528e55bbe53199c6b33da19bc56f770bf0c491d",
@@ -1765,6 +1751,20 @@
       "rotation_position": 1,
       "status": "completed",
       "timestamp": "2026-11-19T19:59:06.014137+00:00",
+      "total_repositories": 24
+    },
+    {
+      "action": "Updated README.md with today's maintenance record",
+      "commit_sha": "f240d16aa60e36734fae87aff12a320cfd92938c",
+      "date": "2026-11-20-slot-1",
+      "error": null,
+      "is_new": false,
+      "next_position": 3,
+      "push_result": "pushed",
+      "repository": "ANDY9855/moiza",
+      "rotation_position": 2,
+      "status": "completed",
+      "timestamp": "2026-11-20T05:51:37.929208+00:00",
       "total_repositories": 24
     }
   ]
