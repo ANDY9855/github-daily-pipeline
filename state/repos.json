@@ -99,7 +99,7 @@
       "is_new": false,
       "last_action": "Updated README.md with today's maintenance record",
       "last_error": null,
-      "last_processed_date": "2026-11-13-slot-0",
+      "last_processed_date": "2026-11-22-slot-0",
       "manual_review": false,
       "name": "Burger",
       "queue_position": 7,
@@ -362,25 +362,11 @@
     }
   ],
   "rotation": {
-    "last_repository_id": 1288170634,
-    "last_run_date": "2026-11-21-slot-3",
-    "next_position": 7
+    "last_repository_id": 1261424995,
+    "last_run_date": "2026-11-22-slot-0",
+    "next_position": 8
   },
   "runs": [
-    {
-      "action": "Updated README.md with today's maintenance record",
-      "commit_sha": "ad565edbe919c708adcd510de746bf3eebf26c53",
-      "date": "2026-10-20-slot-1",
-      "error": null,
-      "is_new": false,
-      "next_position": 4,
-      "push_result": "pushed",
-      "repository": "ANDY9855/ANDY-WHATSAPP-BOT",
-      "rotation_position": 3,
-      "status": "completed",
-      "timestamp": "2026-10-20T03:34:39.885924+00:00",
-      "total_repositories": 24
-    },
     {
       "action": "Updated README.md with today's maintenance record",
       "commit_sha": "bc49c3be544cc762f048392768e3235bf8a2d9c2",
@@ -1765,6 +1751,20 @@
       "rotation_position": 6,
       "status": "completed",
       "timestamp": "2026-11-21T14:16:05.374006+00:00",
+      "total_repositories": 24
+    },
+    {
+      "action": "Updated README.md with today's maintenance record",
+      "commit_sha": "6c2c3fc6ebf17a6c021b8f09fb235603845b1cac",
+      "date": "2026-11-22-slot-0",
+      "error": null,
+      "is_new": false,
+      "next_position": 8,
+      "push_result": "pushed",
+      "repository": "ANDY9855/Burger",
+      "rotation_position": 7,
+      "status": "completed",
+      "timestamp": "2026-11-21T22:47:52.437952+00:00",
       "total_repositories": 24
     }
   ]
