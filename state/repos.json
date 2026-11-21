@@ -69,7 +69,7 @@
       "is_new": false,
       "last_action": "Updated README.md with today's maintenance record",
       "last_error": null,
-      "last_processed_date": "2026-11-12-slot-0",
+      "last_processed_date": "2026-11-21-slot-1",
       "manual_review": false,
       "name": "testing",
       "queue_position": 5,
@@ -362,25 +362,11 @@
     }
   ],
   "rotation": {
-    "last_repository_id": 1343593071,
-    "last_run_date": "2026-11-21-slot-0",
-    "next_position": 5
+    "last_repository_id": 1300366691,
+    "last_run_date": "2026-11-21-slot-1",
+    "next_position": 6
   },
   "runs": [
-    {
-      "action": "Updated README.md with today's maintenance record",
-      "commit_sha": "e35eb197a4c771e4d6ab9a67f0700877549c261a",
-      "date": "2026-10-19-slot-2",
-      "error": null,
-      "is_new": false,
-      "next_position": 2,
-      "push_result": "pushed",
-      "repository": "ANDY9855/dumb",
-      "rotation_position": 1,
-      "status": "completed",
-      "timestamp": "2026-10-19T09:04:34.715773+00:00",
-      "total_repositories": 24
-    },
     {
       "action": "Updated README.md with today's maintenance record",
       "commit_sha": "4a9d84d7f4ba5f05fc209818424fec3d98a73721",
@@ -1765,6 +1751,20 @@
       "rotation_position": 4,
       "status": "completed",
       "timestamp": "2026-11-20T23:42:07.533909+00:00",
+      "total_repositories": 24
+    },
+    {
+      "action": "Updated README.md with today's maintenance record",
+      "commit_sha": "e0be0d6bb817680907a8ff03b3e5234a83421460",
+      "date": "2026-11-21-slot-1",
+      "error": null,
+      "is_new": false,
+      "next_position": 6,
+      "push_result": "pushed",
+      "repository": "ANDY9855/testing",
+      "rotation_position": 5,
+      "status": "completed",
+      "timestamp": "2026-11-21T05:46:16.785218+00:00",
       "total_repositories": 24
     }
   ]
