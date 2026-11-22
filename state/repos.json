@@ -114,7 +114,7 @@
       "is_new": false,
       "last_action": "Updated README.md with today's maintenance record",
       "last_error": null,
-      "last_processed_date": "2026-11-13-slot-1",
+      "last_processed_date": "2026-11-22-slot-1",
       "manual_review": false,
       "name": "CareerGuidancePlatform",
       "queue_position": 8,
@@ -362,25 +362,11 @@
     }
   ],
   "rotation": {
-    "last_repository_id": 1261424995,
-    "last_run_date": "2026-11-22-slot-0",
-    "next_position": 8
+    "last_repository_id": 1226448599,
+    "last_run_date": "2026-11-22-slot-1",
+    "next_position": 9
   },
   "runs": [
-    {
-      "action": "Updated README.md with today's maintenance record",
-      "commit_sha": "bc49c3be544cc762f048392768e3235bf8a2d9c2",
-      "date": "2026-10-20-slot-2",
-      "error": null,
-      "is_new": false,
-      "next_position": 5,
-      "push_result": "pushed",
-      "repository": "QamerZaman123/MedFlowAI",
-      "rotation_position": 4,
-      "status": "completed",
-      "timestamp": "2026-10-20T10:58:31.111154+00:00",
-      "total_repositories": 24
-    },
     {
       "action": "Updated README.md with today's maintenance record",
       "commit_sha": "ce92c215936009652a62d358775729c6c6f689c3",
@@ -1765,6 +1751,20 @@
       "rotation_position": 7,
       "status": "completed",
       "timestamp": "2026-11-21T22:47:52.437952+00:00",
+      "total_repositories": 24
+    },
+    {
+      "action": "Updated README.md with today's maintenance record",
+      "commit_sha": "aa07813a5a53a8655285b3925aae7cc86de6cd89",
+      "date": "2026-11-22-slot-1",
+      "error": null,
+      "is_new": false,
+      "next_position": 9,
+      "push_result": "pushed",
+      "repository": "ANDY9855/CareerGuidancePlatform",
+      "rotation_position": 8,
+      "status": "completed",
+      "timestamp": "2026-11-22T05:16:38.646225+00:00",
       "total_repositories": 24
     }
   ]
