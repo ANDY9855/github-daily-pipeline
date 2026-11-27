@@ -264,7 +264,7 @@
       "is_new": false,
       "last_action": "Updated README.md with today's maintenance record",
       "last_error": null,
-      "last_processed_date": "2026-11-16-slot-3",
+      "last_processed_date": "2026-11-27-slot-1",
       "manual_review": false,
       "name": "indeed-apply-bot",
       "queue_position": 18,
@@ -362,25 +362,11 @@
     }
   ],
   "rotation": {
-    "last_repository_id": 1398470618,
-    "last_run_date": "2026-11-26-slot-3",
-    "next_position": 18
+    "last_repository_id": 1344166592,
+    "last_run_date": "2026-11-27-slot-1",
+    "next_position": 19
   },
   "runs": [
-    {
-      "action": "Updated README.md with today's maintenance record",
-      "commit_sha": "54ce653cd13483a639cc31374de5ee27b2f4447c",
-      "date": "2026-10-23-slot-0",
-      "error": null,
-      "is_new": false,
-      "next_position": 15,
-      "push_result": "pushed",
-      "repository": "ANDY9855/idk",
-      "rotation_position": 14,
-      "status": "completed",
-      "timestamp": "2026-10-22T21:13:49.473097+00:00",
-      "total_repositories": 24
-    },
     {
       "action": "Updated README.md with today's maintenance record",
       "commit_sha": "912a6e68c9239e563b2e8984a6ad4b1f0235d8ad",
@@ -1765,6 +1751,20 @@
       "rotation_position": 17,
       "status": "completed",
       "timestamp": "2026-11-26T16:28:00.462500+00:00",
+      "total_repositories": 24
+    },
+    {
+      "action": "Updated README.md with today's maintenance record",
+      "commit_sha": "c67916e05715cb470ca6dbb6d5bad945f0664e64",
+      "date": "2026-11-27-slot-1",
+      "error": null,
+      "is_new": false,
+      "next_position": 19,
+      "push_result": "pushed",
+      "repository": "ANDY9855/indeed-apply-bot",
+      "rotation_position": 18,
+      "status": "completed",
+      "timestamp": "2026-11-27T01:30:21.471045+00:00",
       "total_repositories": 24
     }
   ]
